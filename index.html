@@ -122,50 +122,23 @@
     </div>
   </footer>
 
+  <!-- 加载词根数据 -->
+  <script src="js/wordData.js"></script>
+
   <!-- 动态术语演示脚本 -->
   <script>
-    const examples = [
-      {
-        word: 'Transformer',
-        prefix: '',
+    // 自动从 WordRoots 数据中提取前 5 个作为动画示例
+    const examples = WordRoots.slice(0, 5).map(root => {
+      const firstExample = root.examples[0];
+      return {
+        word: root.root,
+        prefix: firstExample?.breakdown?.prefix || '',
         prefixMeaning: '',
-        root: 'Transformer',
-        rootMeaning: '注意力机制架构',
-        meaning: 'GPT、BERT的基础'
-      },
-      {
-        word: 'Attention',
-        prefix: '',
-        prefixMeaning: '',
-        root: 'Attention',
-        rootMeaning: '注意力机制',
-        meaning: '让模型关注重点'
-      },
-      {
-        word: 'Token',
-        prefix: '',
-        prefixMeaning: '',
-        root: 'Token',
-        rootMeaning: '词元/标记',
-        meaning: '模型处理文本的基本单位'
-      },
-      {
-        word: 'RLHF',
-        prefix: '',
-        prefixMeaning: '',
-        root: 'RLHF',
-        rootMeaning: '人类反馈强化学习',
-        meaning: 'ChatGPT的成功关键'
-      },
-      {
-        word: 'RAG',
-        prefix: '',
-        prefixMeaning: '',
-        root: 'RAG',
-        rootMeaning: '检索增强生成',
-        meaning: '减少幻觉、知识更新'
-      }
-    ];
+        root: root.root,
+        rootMeaning: root.meaning,
+        meaning: firstExample?.meaning || root.description.substring(0, 30) + '...'
+      };
+    });
 
     let currentIndex = 0;
 
