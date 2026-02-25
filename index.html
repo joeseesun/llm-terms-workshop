@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>词根词缀记忆工坊</title>
+  <title>大模型术语学习工坊</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@20;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/minimal.css">
 </head>
@@ -22,7 +22,7 @@
           <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
           <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
         </svg>
-        词根词缀记忆工坊
+        大模型术语学习工坊
       </a>
       <div class="nav-links">
         <a href="learn.html" class="nav-link">学习</a>
@@ -39,17 +39,17 @@
 
       <!-- 主标题 -->
       <h1 class="hero-title">
-        每天10分钟<br>
-        90天后你会认识<br>
-        30,000个单词
+        20个核心术语<br>
+        搞懂大模型<br>
+        从入门到精通
       </h1>
 
       <!-- 副标题 -->
       <p class="hero-subtitle">
-        300个词根 = 30,000个单词的钥匙
+        Transformer、Attention、RLHF... 系统掌握大模型核心概念
       </p>
 
-      <!-- 动态词根演示 -->
+      <!-- 动态术语演示 -->
       <div class="demo">
         <div class="demo-word">
           <span id="demoWord">inspect</span>
@@ -76,7 +76,7 @@
       <!-- CTA按钮组 -->
       <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
         <a href="learn.html" class="btn btn-primary btn-large">
-          开始第一个词根 →
+          开始第一个术语 →
         </a>
         <a href="flashcard.html" class="btn btn-large" style="background: white; border: 2px solid var(--color-border); color: var(--color-text);">
           闪卡复习
@@ -85,7 +85,7 @@
 
       <!-- 底部小字 -->
       <p class="text-secondary mt-xl" style="font-size: 0.875rem;">
-        300个词根 · 免费使用 · 无需注册
+        20个术语 · 免费使用 · 无需注册
       </p>
 
     </div>
@@ -96,11 +96,11 @@
     <div class="container">
       <div class="stat-grid">
         <div class="stat-card">
-          <div class="stat-value">300</div>
-          <div class="stat-label">核心词根</div>
+          <div class="stat-value">20</div>
+          <div class="stat-label">核心术语</div>
         </div>
         <div class="stat-card">
-          <div class="stat-value">30,000</div>
+          <div class="stat-value">2000+</div>
           <div class="stat-label">可推导单词</div>
         </div>
         <div class="stat-card">
@@ -114,7 +114,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>词根词缀记忆工坊 · 像搭积木一样记单词</p>
+      <p>大模型术语学习工坊 · 像搭积木一样记单词</p>
       <div class="footer-links">
         <a href="https://github.com" class="footer-link" target="_blank">GitHub</a>
         <a href="https://x.com/vista8" class="footer-link" target="_blank">@vista8</a>
@@ -122,48 +122,48 @@
     </div>
   </footer>
 
-  <!-- 动态词根演示脚本 -->
+  <!-- 动态术语演示脚本 -->
   <script>
     const examples = [
       {
-        word: 'inspect',
-        prefix: 'in',
-        prefixMeaning: '向内',
-        root: 'spect',
-        rootMeaning: '看',
-        meaning: '向内看 = 检查'
+        word: 'Transformer',
+        prefix: '',
+        prefixMeaning: '',
+        root: 'Transformer',
+        rootMeaning: '注意力机制架构',
+        meaning: 'GPT、BERT的基础'
       },
       {
-        word: 'respect',
-        prefix: 're',
-        prefixMeaning: '再',
-        root: 'spect',
-        rootMeaning: '看',
-        meaning: '再看 = 尊重'
+        word: 'Attention',
+        prefix: '',
+        prefixMeaning: '',
+        root: 'Attention',
+        rootMeaning: '注意力机制',
+        meaning: '让模型关注重点'
       },
       {
-        word: 'transport',
-        prefix: 'trans',
-        prefixMeaning: '穿过',
-        root: 'port',
-        rootMeaning: '带',
-        meaning: '带过去 = 运输'
+        word: 'Token',
+        prefix: '',
+        prefixMeaning: '',
+        root: 'Token',
+        rootMeaning: '词元/标记',
+        meaning: '模型处理文本的基本单位'
       },
       {
-        word: 'export',
-        prefix: 'ex',
-        prefixMeaning: '向外',
-        root: 'port',
-        rootMeaning: '带',
-        meaning: '带出去 = 出口'
+        word: 'RLHF',
+        prefix: '',
+        prefixMeaning: '',
+        root: 'RLHF',
+        rootMeaning: '人类反馈强化学习',
+        meaning: 'ChatGPT的成功关键'
       },
       {
-        word: 'predict',
-        prefix: 'pre',
-        prefixMeaning: '提前',
-        root: 'dict',
-        rootMeaning: '说',
-        meaning: '提前说 = 预测'
+        word: 'RAG',
+        prefix: '',
+        prefixMeaning: '',
+        root: 'RAG',
+        rootMeaning: '检索增强生成',
+        meaning: '减少幻觉、知识更新'
       }
     ];
 
