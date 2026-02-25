@@ -1,5 +1,5 @@
 // 大模型术语学习数据
-const KnowledgeItems = [
+const WordRoots = [
   {
     id: 1,
     root: "Transformer",
